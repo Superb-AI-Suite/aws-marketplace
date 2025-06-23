@@ -142,11 +142,11 @@ result = json.loads(response)
 # (Image loading is the same as above)
 
 # 2. Construct the payload with a box prompt
-# The box coordinates are [x_min, y_min, x_max, y_max] in relative format (0.0 to 1.0)
+# The box coordinates are [x_min, y_min, x_max, y_max] in relative format.
 payload = {
     "image": base64_image,
     "prompt": {
-        "boxes": [[0.1, 0.2, 0.4, 0.5]]
+        "boxes": [[1, 2, 42, 51]]
     }
 }
 
@@ -219,9 +219,6 @@ The model returns a JSON object containing the prediction results:
   * **Performance:** 1.03 TFLOPS
   * **Recommended Instance Type:** `ml.g4dn.xlarge` or other GPU instances.
 
-## 📜 License
-
-This model is licensed under the [MIT License](LICENSE.md). Please refer to the `LICENSE` file for more details.
 
 ## ❓ Support
 
