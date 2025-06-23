@@ -221,7 +221,7 @@ The model returns a JSON object containing the prediction results:
 
 ## 📜 License
 
-This model is licensed under the [MIT License](LICENSE.md). Please refer to the `LICENSE.md` file for more details.
+This model is licensed under the [MIT License](LICENSE.md). Please refer to the `LICENSE` file for more details.
 
 ## ❓ Support
 
