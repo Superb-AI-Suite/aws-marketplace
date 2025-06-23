@@ -1,11 +1,11 @@
-# ZERO - Zero-shot Object Detection by Superb AI
+# ZERO - AWS Marketplace Examples
 
 <p align="center">
   <img src="https://asset.superb-ai.com/assets/logo/CI_superbAI_RGB_basic.png" alt="Superb AI Logo" width="300"/>
 </p>
 
 <p align="center">
-  <strong>An Industrial Vision Foundation Model for Instant, Training-Free Object Detection</strong>
+  <strong>An Industrial Vision Foundation Model</strong>
   <br/><br/>
   <a href="https://aws.amazon.com/marketplace/pp/prodview-xxxxxxxxxxxxxxx">
     <img src="https://img.shields.io/badge/AWS%20Marketplace-View%20Listing-orange?style=for-the-badge&logo=amazonaws" alt="AWS Marketplace">
