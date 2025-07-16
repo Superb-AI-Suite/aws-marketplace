@@ -100,7 +100,7 @@ model = ModelPackage(
 predictor = model.deploy(
     initial_instance_count=1,
     instance_type='ml.g4dn.xlarge',
-    endpoint_name='zero-endpoint' # You can choose a different name
+    endpoint_name='zero-marketplace' # You can choose a different name
 )
 ```
 
