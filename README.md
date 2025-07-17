@@ -1,37 +1,27 @@
-# ZERO - AWS Marketplace Examples
-
 <p align="center">
-  <img src="https://asset.superb-ai.com/assets/logo/CI_superbAI_RGB_basic.png" alt="Superb AI Logo" width="300"/>
+  <img src="https://asset.superb-ai.com/assets/logo/CI_superbAI_RGB_basic.png" alt="Superb AI Logo" width="300"/>
 </p>
 
 <p align="center">
-  <strong>An Industrial Vision Foundation Model</strong>
-  <br/><br/>
-  <a href="https://aws.amazon.com/marketplace/pp/prodview-xxxxxxxxxxxxxxx">
-    <img src="https://img.shields.io/badge/AWS%20Marketplace-View%20Listing-orange?style=for-the-badge&logo=amazonaws" alt="AWS Marketplace">
-  </a>
-  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT">
+  <strong>An Industrial Vision Foundation Model</strong>
+  <br/><br/>
+  <a href="https://aws.amazon.com/marketplace/pp/prodview-xxxxxxxxxxxxxxx">
+    <img src="https://img.shields.io/badge/AWS%20Marketplace-View%20Listing-orange?style=for-the-badge&logo=amazonaws" alt="AWS Marketplace">
+  </a>
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT">
 </p>
 
 This repository provides an example Jupyter Notebook on how to use the **ZERO** model package on Amazon SageMaker. **ZERO** is an industrial Vision Foundation Model (VFM) ready for immediate deployment without the need for data labeling or model retraining. It leverages zero-shot and open-world technologies to instantly detect and pinpoint new or unseen objects using simple text or image box prompts.
 
----
-
 ## 📖 Table of Contents
-* [About the Model](#-about-the-model)
-* [Key Features & Highlights](#-key-features--highlights)
-* [SageMaker Deployment & Usage](#-sagemaker-deployment--usage)
-  * [Step 1: Subscribe to the Model](#step-1-subscribe-to-the-model)
-  * [Step 2: Set Up Environment](#step-2-set-up-environment)
-  * [Step 3: Deploy the Model to an Endpoint](#step-3-deploy-the-model-to-an-endpoint)
-  * [Step 4: Perform Real-time Inference](#step-4-perform-real-time-inference)
-  * [Step 5: Clean Up Resources](#step-5-clean-up-resources)
-* [Input/Output Interface](#-inputoutput-interface)
-* [Technical Specifications](#-technical-specifications)
-* [License](#-license)
-* [Support](#-support)
 
----
+- [About the Model](https://www.google.com/search?q=%23-about-the-model)
+- [Key Features & Highlights](https://www.google.com/search?q=%23-key-features--highlights)
+- [SageMaker Deployment & Usage](https://www.google.com/search?q=%23-sagemaker-deployment--usage) *[Step 1: Subscribe and Deploy the Model](https://www.google.com/search?q=%23step-1-subscribe-and-deploy-the-model)* [Step 2: Set Up Environment for Inference](https://www.google.com/search?q=%23step-2-set-up-environment-for-inference) *[Step 3: Perform Real-time Inference](https://www.google.com/search?q=%23step-3-perform-real-time-inference)* [Step 4: Clean Up Resources](https://www.google.com/search?q=%23step-4-clean-up-resources)
+- [Input/Output Interface](https://www.google.com/search?q=%23-inputoutput-interface)
+- [Technical Specifications](https://www.google.com/search?q=%23-technical-specifications)
+- [License](https://www.google.com/search?q=%23-license)
+- [Support](https://www.google.com/search?q=%23-support)
 
 ## 🧠 About the Model
 
@@ -43,128 +33,157 @@ This repository and the accompanying Jupyter Notebook (`/zero/ZERO-Marketplace.i
 
 ## ✨ Key Features & Highlights
 
-* **🚀 Zero-Shot Deployment:** Instantly detect untrained objects without complex data collection, labeling, or model retraining. Adapt immediately to new products, defect types, or environment changes, dramatically cutting development time and costs.
-
-* **✍️ Flexible Multi-Prompt Input:** Deploy and operate AI instantly by simply describing your target object in text or providing an example image box. ZERO supports diverse input prompts for intuitive, human-like interaction.
-
-* **🏭 Industrial-Specialized VFM:** Trained on invaluable, real-world data from dozens of industrial sectors including manufacturing, logistics, and retail. ZERO delivers high performance and immediate usability across complex industrial domains.
-
-* **💻 Edge & On-Premise Ready:** Engineered for high efficiency with a lightweight 622M parameters and 1.03 TFLOPS processing, ensuring seamless operation on both cloud infrastructure and resource-constrained edge devices without requiring expensive GPU hardware.
+- **🚀 Zero-Shot Deployment:** Instantly detect untrained objects without complex data collection, labeling, or model retraining. Adapt immediately to new products, defect types, or environment changes, dramatically cutting development time and costs.
+- **✍️ Flexible Multi-Prompt Input:** Deploy and operate AI instantly by simply describing your target object in text or providing an example image box. ZERO supports diverse input prompts for intuitive, human-like interaction.
+- **🏭 Industrial-Specialized VFM:** Trained on invaluable, real-world data from dozens of industrial sectors including manufacturing, logistics, and retail. ZERO delivers high performance and immediate usability across complex industrial domains.
+- **💻 Edge & On-Premise Ready:** Engineered for high efficiency with a lightweight 622M parameters and 1.03 TFLOPS processing, ensuring seamless operation on both cloud infrastructure and resource-constrained edge devices without requiring expensive GPU hardware.
 
 ## 🚀 SageMaker Deployment & Usage
 
 This section provides a step-by-step guide to deploying ZERO and running inference, based on the provided Jupyter Notebook.
 
-### Step 1: Subscribe to the Model
+### Step 1: Subscribe and Deploy the Model
 
-Before you can use the model, you need to subscribe to it on the AWS Marketplace.
+Before you can use the model, you need to subscribe to it on the AWS Marketplace and deploy it to a SageMaker endpoint.
 
-1.  Navigate to the [ZERO Model Listing on AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxxxxxxxxxxxxx).
-2.  Click the **Continue to Subscribe** button.
-3.  Review the terms and conditions, then click **"Accept Terms"**.
-4.  Once the subscription is active (this may take a few minutes), you can proceed. You will find the **Model Package ARN** under the "Usage Information" section.
+1. Navigate to the [ZERO Model Listing on AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxxxxxxxxxxxxx).
+2. Click the **Continue to Subscribe** button.
+3. Review the terms and conditions, then click **"Accept Terms"**.
+4. Once the subscription is active, follow the deployment instructions in the "Usage Information" tab on the Marketplace listing to create a SageMaker endpoint. The recommended instance type is `ml.g4dn.xlarge`.
+5. Make a note of your endpoint's name.
 
-### Step 2: Set Up Environment
+### Step 2: Set Up Environment for Inference
 
-Open the `zero/ZERO-Marketplace.ipynb` notebook in a SageMaker Notebook Instance. The notebook will guide you through setting up the required IAM role and initializing the boto3 and SageMaker clients.
+Configure your environment with your AWS credentials and initialize the Boto3 client to interact with SageMaker.
 
-```python
-import sagemaker
-from sagemaker import ModelPackage
+```
 import boto3
+import os
 
-# Get the SageMaker execution role
-role = sagemaker.get_execution_role()
-sagemaker_session = sagemaker.Session()
+# Configure your AWS credentials and region
+# It's recommended to use environment variables for security
+os.environ['AWS_ACCESS_KEY_ID'] = 'YOUR_AWS_ACCESS_KEY_ID'
+os.environ['AWS_SECRET_ACCESS_KEY'] = 'YOUR_AWS_SECRET_ACCESS_KEY'
+os.environ['AWS_REGION'] = 'your-aws-region' # e.g., 'ap-northeast-2'
 
-# Your specific Model Package ARN from AWS Marketplace
-model_package_arn = '<YOUR_MODEL_PACKAGE_ARN>'
-````
+# Initialize Boto3 session and SageMaker runtime client
+boto_session = boto3.Session(region_name=os.environ['AWS_REGION'])
+sm_runtime = boto_session.client("sagemaker-runtime")
 
-*Note: Replace `<YOUR_MODEL_PACKAGE_ARN>` with the ARN you obtained after subscribing.*
+# The name of the endpoint you deployed in Step 1
+zero_endpoint_name = "zero-marketplace" # Or your custom endpoint name
 
-### Step 3: Deploy the Model to an Endpoint
-
-Create a deployable SageMaker model from the model package and deploy it to a real-time endpoint. The notebook specifies the recommended instance type.
-
-```python
-# Create a SageMaker Model from the Model Package
-model = ModelPackage(
-    role=role,
-    model_package_arn=model_package_arn,
-    sagemaker_session=sagemaker_session
-)
-
-# Deploy the model to an endpoint
-# Recommended instance type is ml.g4dn.xlarge
-predictor = model.deploy(
-    initial_instance_count=1,
-    instance_type='ml.g4dn.xlarge',
-    endpoint_name='zero-marketplace' # You can choose a different name
-)
 ```
 
-### Step 4: Perform Real-time Inference
+### Step 3: Perform Real-time Inference
 
-Once the endpoint is `InService`, you can send it image data and prompts to get predictions.
+Once the endpoint is `InService`, you can send it image data and prompts to get predictions. The payload should be a JSON object containing the `search_image` and a list of `queries`.
 
-The payload should be a JSON object containing the `image` (Base64 encoded) and a `prompt`.
+**Example 1: Using a Text Prompt**
 
-**Example: Using a Text Prompt**
+Here, we find all instances of "strawberry" in an image.
 
-```python
-import base64
+```
 import json
+import base64
+from io import BytesIO
+import requests
+from PIL import Image
 
-# 1. Load your image and encode it
-with open("your_image.jpg", "rb") as f:
-    image_bytes = f.read()
-base64_image = base64.b64encode(image_bytes).decode('utf-8')
+# Helper function to encode image to base64
+def base64_encode(data):
+    if isinstance(data, str):
+        data = data.encode("utf-8")
+    return base64.b64encode(data).decode("utf-8")
 
-# 2. Construct the payload with a text prompt
-payload = {
-    "image": base64_image,
-    "prompt": {
-        "texts": ["a person wearing a helmet", "a person not wearing a helmet"]
-    }
+# 1. Load your image
+image_url = "https://www.californiastrawberries.com/wp-content/uploads/2021/05/Rainbow-Fruit-Salad-1024.jpg"
+response = requests.get(image_url)
+image = Image.open(BytesIO(response.content)).convert("RGB")
+
+# 2. Convert image to base64
+buffered = BytesIO()
+image.save(buffered, format="JPEG")
+search_image_base64 = base64_encode(buffered.getvalue())
+
+# 3. Construct the payload
+body = {
+    "search_image": f"data:image/jpeg;base64,{search_image_base64}",
+    "queries": [
+        {
+            "prompt_image": "",
+            "prompts": [
+                {
+                    "text": "strawberry",
+                    "box": [],
+                    "box_threshold": 0.1,
+                    "multimodal_threshold": 0.22
+                }
+            ]
+        }
+    ]
 }
 
-# 3. Get prediction
-response = predictor.predict(json.dumps(payload))
-result = json.loads(response)
+# 4. Get prediction
+response = sm_runtime.invoke_endpoint(
+    EndpointName=zero_endpoint_name,
+    Body=json.dumps(body),
+    ContentType="application/json",
+)
 
-# The 'result' will contain bounding boxes and scores for the detected objects.
+# The 'result' will contain bounding boxes for the detected objects.
+result = json.load(response["Body"])
+# visualize_detection(result, image)
+
 ```
 
-**Example: Using a Box (Image) Prompt**
+**Example 2: Using a Box (Semantic) Prompt**
 
-```python
-# (Image loading is the same as above)
+Provide an image, a text label, and a bounding box around an object of interest. The model will find other, similar objects in the `search_image`.
 
-# 2. Construct the payload with a box prompt
-# The box coordinates are [x_min, y_min, x_max, y_max] in relative format.
-payload = {
-    "image": base64_image,
-    "prompt": {
-        "boxes": [[1, 2, 42, 51]]
-    }
+```
+# (Image loading and encoding is similar to the above example)
+
+# Construct the payload with a box prompt
+# The box coordinates are [x_min, y_min, x_max, y_max] in absolute pixel format.
+body = {
+    "search_image": f"data:image/jpeg;base64,{search_image_base64}",
+    "queries": [
+        {
+            "prompt_image": f"data:image/jpeg;base64,{search_image_base64}",
+            "prompts": [
+                {
+                    "text": "potato",
+                    "box": [1779.58, 2096.02, 1891.69, 2158.37],
+                    "box_threshold": 0.1,
+                    "multimodal_threshold": 0.3
+                }
+            ]
+        }
+    ]
 }
 
-# 3. Get prediction
-response = predictor.predict(json.dumps(payload))
-result = json.loads(response)
+# Get prediction from the endpoint
+# ...
+
 ```
 
-### Step 5: Clean Up Resources
+### Step 4: Clean Up Resources
 
 To avoid incurring ongoing charges, it is important to delete the SageMaker endpoint when you are finished.
 
-```python
-# Delete the endpoint
-predictor.delete_endpoint()
+```
+# Initialize a sagemaker client to delete the endpoint
+sagemaker_client = boto_session.client("sagemaker")
 
-# Delete the model configuration
-predictor.delete_model()
+# Delete the endpoint
+sagemaker_client.delete_endpoint(EndpointName=zero_endpoint_name)
+
+# Optionally, delete the endpoint configuration and model
+sagemaker_client.delete_endpoint_config(EndpointConfigName=zero_endpoint_name)
+# You will need to find the model name associated with your endpoint to delete it.
+# sagemaker_client.delete_model(ModelName=model_name)
+
 ```
 
 ## 📋 Input/Output Interface
@@ -173,52 +192,72 @@ predictor.delete_model()
 
 The model expects a JSON object with the following structure:
 
-```json
+```
 {
-  "image": "<base64_encoded_string>",
-  "prompt": {
-    "texts": ["string_prompt_1", "string_prompt_2", ...],
-    "boxes": [
-        [x_min, y_min, x_max, y_max], 
-        ...
-    ]
-  }
+  "search_image": "data:image/jpeg;base64,<base64_encoded_string>",
+  "queries": [
+    {
+      "prompt_image": "data:image/jpeg;base64,<base64_encoded_string>",
+      "prompts": [
+        {
+          "text": "string_prompt_1",
+          "box": [x_min, y_min, x_max, y_max],
+          "box_threshold": 0.1,
+          "multimodal_threshold": 0.22
+        }
+      ]
+    }
+  ]
 }
+
 ```
 
-  * `image`: The raw image file encoded as a Base64 string.
-  * `prompt`: A dictionary containing one or both of the following keys:
-      * `texts`: A list of strings describing the objects to detect.
-      * `boxes`: A list of bounding boxes (each as a list of four floats) defining regions of interest. Coordinates must be relative to image size (from 0.0 to 1.0).
+- `search_image`: **Required**. The image to perform detection on, as a Base64 encoded string with a data URI prefix.
+- `queries`: **Required**. A list of query objects. Each query can have its own `prompt_image`.
+  - `prompt_image`: The image containing the example objects for semantic search. Can be an empty string (`""`) for simple text-based search.
+  - `prompts`: A list of prompt definitions.
+    - `text`: **Required**. The text label for the object you want to find.
+    - `box`: A list of four numbers defining a bounding box `[x_min, y_min, x_max, y_max]`. Coordinates must be in **absolute pixel values**. For text-only prompts, provide an empty list `[]`.
+    - `box_threshold`: A confidence threshold for box-only prompts.
+    - `multimodal_threshold`: A confidence threshold for combined text/box prompts.
 
 ### Output Response (`application/json`)
 
 The model returns a JSON object containing the prediction results:
 
-```json
+```
 {
-    "prediction": [
+    "output": [
         {
-            "box": [x_min, y_min, x_max, y_max],
-            "score": 0.95,
-            "label": "string_prompt_1"
-        },
-        ...
+            "boxes": [
+                [x1_min, y1_min, x1_max, y1_max],
+                [x2_min, y2_min, x2_max, y2_max],
+                ...
+            ],
+            "text": [
+                "string_prompt_1",
+                "string_prompt_2",
+                ...
+            ]
+        }
     ]
 }
+
 ```
 
-  * `prediction`: A list of detected objects, where each object is a dictionary with:
-      * `box`: The coordinates of the predicted bounding box.
-      * `score`: The model's confidence score for the prediction (0.0 to 1.0).
-      * `label`: The prompt that corresponds to this detection.
+- `output`: A list containing a single dictionary with the detection results.
+  - `boxes`: A list of predicted bounding boxes. Each box corresponds to a label in the `text` list at the same index.
+  - `text`: A list of labels corresponding to the detected objects.
 
 ## 🛠️ Technical Specifications
 
-  * **Model Size:** 622M parameters
-  * **Performance:** 1.03 TFLOPS
-  * **Recommended Instance Type:** `ml.g4dn.xlarge` or other GPU instances.
+- **Model Size:** 622M parameters
+- **Performance:** 1.03 TFLOPS
+- **Recommended Instance Type:** `ml.g4dn.xlarge` or other GPU instances.
 
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
 
 ## ❓ Support
 
