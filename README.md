@@ -5,7 +5,7 @@
 <p align="center">
   <strong>An Industrial Vision Foundation Model</strong>
   <br/><br/>
-  <a href="https://aws.amazon.com/marketplace/pp/prodview-xxxxxxxxxxxxxxx">
+  <a href="https://aws.amazon.com/marketplace/pp/prodview-xm2s45njvoiqk">
     <img src="https://img.shields.io/badge/AWS%20Marketplace-View%20Listing-orange?style=for-the-badge&logo=amazonaws" alt="AWS Marketplace">
   </a>
   <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" alt="License: MIT">
