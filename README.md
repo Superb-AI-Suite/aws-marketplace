@@ -46,7 +46,7 @@ This section provides a step-by-step guide to deploying ZERO and running inferen
 
 Before you can use the model, you need to subscribe to it on the AWS Marketplace and deploy it to a SageMaker endpoint.
 
-1. Navigate to the [ZERO Model Listing on AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xxxxxxxxxxxxxxx).
+1. Navigate to the [ZERO Model Listing on AWS Marketplace](https://aws.amazon.com/marketplace/pp/prodview-xm2s45njvoiqk).
 2. Click the **Continue to Subscribe** button.
 3. Review the terms and conditions, then click **"Accept Terms"**.
 4. Once the subscription is active, follow the deployment instructions in the "Usage Information" tab on the Marketplace listing to create a SageMaker endpoint. The recommended instance type is `ml.g4dn.xlarge`.
